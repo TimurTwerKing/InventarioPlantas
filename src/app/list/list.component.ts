@@ -3,8 +3,9 @@ import { Plant } from '../plant.interface';
 
 @Component({
   selector: 'app-list',
-  templateUrl: 'list.component.html',
-  styleUrls: ['list.component.scss']
+  standalone: true, // Marca el componente como standalone
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss'],
 })
 export class PlantListComponent {
   @Input() plants: Plant[] = [];

@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.catalog {
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.list {
+  padding-left: 20px;
+}

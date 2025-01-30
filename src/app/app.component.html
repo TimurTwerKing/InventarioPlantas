@@ -1,2 +1,12 @@
-<app-catalog></app-catalog>
-<app-list></app-list>
+<div class="container">
+  <div class="catalog">
+    <app-catalog (addPlant)="addPlant($event)"></app-catalog>
+  </div>
+  <div class="list">
+    <app-list
+      [plants]="plants"
+      (deletePlant)="deletePlant($event)"
+      (toggleFavorite)="toggleFavorite($event)">
+    </app-list>
+  </div>
+</div>

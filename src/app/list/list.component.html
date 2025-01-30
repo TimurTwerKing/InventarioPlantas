@@ -1,11 +1,11 @@
 <ul>
   @for (plant of plants; track plant.name) {
-  <li [class.favorite]="plant.isFavorite">
-    {{ plant.name }} ({{ plant.type }})
-    <button (click)="onDelete(plant)">Delete</button>
-    <button (click)="onToggleFavorite(plant)">
-      {{ plant.isFavorite ? "Unfavorite" : "Favorite" }}
-    </button>
-  </li>
+    <li [class.favorite]="plant.isFavorite">
+      <span>{{ plant.name }} ({{ plant.type }})</span>
+      <button (click)="onDelete(plant)">Eliminar</button>
+      <button (click)="onToggleFavorite(plant)">
+        {{ plant.isFavorite ? "Quitar Favorito" : "Favorito" }}
+      </button>
+    </li>
   }
 </ul>

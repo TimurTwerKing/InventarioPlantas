@@ -1,5 +1,5 @@
 export interface Plant {
   name: string;
-  type: "Shrub" | "Tree";
+  type: 'Shrub' | 'Tree';
   isFavorite: boolean;
 }

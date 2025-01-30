@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Plant } from '../plant.interface';
 import { FormsModule } from '@angular/forms';
+import { Plant } from '../plant.interface';
 
 @Component({
   selector: 'app-catalog',
-  imports: [FormsModule],
+  standalone: true, // Marca el componente como standalone
+  imports: [FormsModule], // Importa FormsModule directamente aquí
   templateUrl: './catalog.component.html',
-  styleUrl: './catalog.component.scss'
+  styleUrl: './catalog.component.scss',
 })
 export class CatalogComponent {
   plant: Plant = { name: "", type: "Shrub", isFavorite: false };
@@ -16,9 +17,9 @@ export class CatalogComponent {
   clearForm() {
     this.plant = { name: "", type: "Shrub", isFavorite: false };
   }
+
   savePlant() {
     this.addPlant.emit({ ...this.plant });
     this.clearForm();
-  };
+  }
 }
-
