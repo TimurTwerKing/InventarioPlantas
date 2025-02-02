@@ -14,12 +14,12 @@ export class CatalogComponent {
   plantTypes: Plant['type'][] = ['Shrub', 'Tree'];
   @Output() addPlant = new EventEmitter<Plant>();
 
-  clearForm() {
-    this.plant = { name: "", type: "Shrub", isFavorite: false };
-  }
+  // clearForm() {
+  //   this.plant = { name: "", type: "Shrub", isFavorite: false };
+  // }
 
   savePlant() {
     this.addPlant.emit({ ...this.plant });
-    this.clearForm();
+    // this.clearForm();
   }
 }

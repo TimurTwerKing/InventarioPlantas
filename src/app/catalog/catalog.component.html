@@ -1,11 +1,11 @@
 <form (ngSubmit)="savePlant()">
   <div>
-    <label for="name">Nombre:</label>
+    <label for="name">Plant name for register:</label>
     <input id="name" [(ngModel)]="plant.name" name="name" required />
   </div>
 
   <div>
-    <label>Tipo:</label>
+    <label>Type:</label>
     @for (type of plantTypes; track type) {
       <label>
         <input type="radio" [(ngModel)]="plant.type" name="type" [value]="type" /> {{ type }}
@@ -14,7 +14,7 @@
   </div>
 
   <div>
-    <button type="button" (click)="clearForm()">Limpiar</button>
-    <button type="submit">Guardar</button>
+    <button type="submit">Save</button>
+    <!-- <button type="button" (click)="clearForm()">Clean</button> -->
   </div>
 </form>
